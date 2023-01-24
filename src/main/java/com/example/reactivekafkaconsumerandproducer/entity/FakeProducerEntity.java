@@ -1,17 +1,20 @@
-package com.example.reactivekafkaconsumerandproducer.dto;
-
+package com.example.reactivekafkaconsumerandproducer.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 
-@JsonRootName("FakeConsumer")
+@JsonRootName("FakeProducer")
 @NoArgsConstructor
-public class FakeConsumerDTO {
+@Entity
+public class FakeProducerEntity {
     @JsonProperty("id")
+    @Id
     private String id;
 
-    public FakeConsumerDTO(String id) {
+    public FakeProducerEntity(String id) {
         this.id = id;
     }
 
@@ -25,7 +28,7 @@ public class FakeConsumerDTO {
 
     @Override
     public String toString() {
-        return "FakeConsumerDTO{" +
+        return "FakeProducerDTO{" +
                 "id='" + id + '\'' +
                 '}';
     }

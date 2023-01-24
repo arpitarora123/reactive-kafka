@@ -2,8 +2,10 @@ package com.example.reactivekafkaconsumerandproducer.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import lombok.NoArgsConstructor;
 
 @JsonRootName("FakeProducer")
+@NoArgsConstructor
 public class FakeProducerDTO {
     @JsonProperty("id")
     private String id;
